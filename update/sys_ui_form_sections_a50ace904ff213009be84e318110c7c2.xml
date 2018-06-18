@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="a50ace904ff213009be84e318110c7c2" sys_domain="global" table="x_140262_veridy_juxtapose" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 19:59:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3d0ace904ff213009be84e318110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_140262_veridy_juxtapose" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">a50ace904ff213009be84e318110c7c2</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 19:59:12</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 19:59:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>390ace904ff213009be84e318110c7c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_140262_veridy_juxtapose" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">a50ace904ff213009be84e318110c7c2</sys_ui_form>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 19:59:12</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_140262_veridy_juxtapose</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 19:59:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a50ace904ff213009be84e318110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_140262_veridy_juxtapose</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+            <sys_update_name>sys_ui_form_sections_a50ace904ff213009be84e318110c7c2</sys_update_name>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 19:59:11</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

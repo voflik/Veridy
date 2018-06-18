@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Expected vs Actual" section_id="650ace904ff213009be84e318110c7c1" sys_domain="global" table="x_140262_veridy_juxtapose" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_serial</element>
+            <position>0</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>3d4dce144ff213009be84e318110c7f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_tag</element>
+            <position>1</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>bd4dce144ff213009be84e318110c7f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_manufacturer</element>
+            <position>2</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>314dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_model</element>
+            <position>3</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>b14dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_description</element>
+            <position>4</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>354dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expected_class</element>
+            <position>5</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>b54dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>394dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_serial</element>
+            <position>7</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>b94dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_tag</element>
+            <position>8</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>3d4dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_manufacturer</element>
+            <position>9</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>bd4dce144ff213009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_model</element>
+            <position>10</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>314dce144ff213009be84e318110c7f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_description</element>
+            <position>11</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>b14dce144ff213009be84e318110c7f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_class</element>
+            <position>12</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>354dce144ff213009be84e318110c7f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>actual_class_match</element>
+            <position>13</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
+            <sys_id>b54dce144ff213009be84e318110c7f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Expected vs Actual" display_value="Expected vs Actual" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">650ace904ff213009be84e318110c7c1</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Expected vs Actual</caption>
+            <header>false</header>
+            <name>x_140262_veridy_juxtapose</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 19:59:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>650ace904ff213009be84e318110c7c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Expected vs Actual</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+            <sys_update_name>sys_ui_section_650ace904ff213009be84e318110c7c1</sys_update_name>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 19:59:11</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

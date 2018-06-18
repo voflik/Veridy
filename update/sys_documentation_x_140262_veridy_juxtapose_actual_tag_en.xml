@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="actual_tag" label="Actual Tag" language="en" table="x_140262_veridy_juxtapose">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>actual_tag</element>
+            <help/>
+            <hint/>
+            <label>Actual Tag</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <plural>Actual Tags</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-15 15:57:25</sys_created_on>
+            <sys_id>44b2d9d04f7213009be84e318110c754</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Actual Tag</sys_name>
+            <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+            <sys_update_name>sys_documentation_x_140262_veridy_juxtapose_actual_tag_en</sys_update_name>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-15 15:57:25</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
