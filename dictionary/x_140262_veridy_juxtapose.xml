@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Juxtapose" max_length="40" name="x_140262_veridy_juxtapose" type="collection">
-        <element choice="1" label="Actual Class" max_length="40" name="actual_class" type="choice">
-            <choice>
-                <element label="LCD" value="LCD"/>
-            </choice>
-        </element>
-        <element label="Actual Class Match" max_length="40" name="actual_class_match" type="boolean"/>
-        <element label="Actual Description" max_length="40" name="actual_description" type="string"/>
+        <element label="Actual Class" max_length="40" name="actual_class" type="string"/>
+        <element label="Actual Class Match" max_length="8" name="actual_class_match" type="boolean"/>
+        <element label="Actual Description" max_length="255" name="actual_description" type="string"/>
         <element label="Actual Manufacturer" max_length="40" name="actual_manufacturer" type="string"/>
         <element label="Actual Model" max_length="40" name="actual_model" type="string"/>
         <element label="Actual Serial" max_length="40" name="actual_serial" type="string"/>
         <element label="Actual Tag" max_length="40" name="actual_tag" type="string"/>
-        <element choice="1" label="Expected Class" max_length="40" name="expected_class" type="choice">
-            <choice>
-                <element label="LCD" value="LCD"/>
-            </choice>
-        </element>
-        <element label="Expected Description" max_length="40" name="expected_description" type="string"/>
+        <element label="Calculated Confidence Level" max_length="10" name="calculated_confidence_level" read_only="true" type="integer"/>
+        <element label="Expected Class" max_length="40" name="expected_class" type="string"/>
+        <element label="Expected Description" max_length="255" name="expected_description" type="string"/>
         <element label="Expected Manufacturer" max_length="40" name="expected_manufacturer" type="string"/>
         <element label="Expected Model" max_length="40" name="expected_model" type="string"/>
         <element label="Expected Serial" max_length="40" name="expected_serial" type="string"/>
         <element label="Expected Tag" max_length="40" name="expected_tag" type="string"/>
         <element choice="1" label="Matched" max_length="40" name="matched" type="choice">
             <choice>
-                <element label="Exact" value="Exact"/>
+                <element label="Exact" sequence="10" value="EXACT"/>
+                <element label="Inexact" sequence="20" value="INEXACT"/>
+                <element label="No Match" sequence="30" value="NO MATCH"/>
+                <element label="N/A" sequence="40" value="N/A"/>
             </choice>
         </element>
-        <element choice="1" label="Match Class" max_length="40" name="match_class" type="choice">
-            <choice>
-                <element label="LCD" value="LCD"/>
-            </choice>
-        </element>
+        <element label="Matching CI" max_length="32" name="matching_ci" reference="cmdb_ci" type="reference"/>
+        <element label="Match Class" max_length="40" name="match_class" type="string"/>
         <element label="Match Class Match" max_length="40" name="match_class_match" type="boolean"/>
+        <element choice="1" label="Match Confidence" max_length="40" name="match_confidence" type="choice">
+            <choice>
+                <element label="High Confidence" value="high"/>
+                <element label="Low Confidence" value="low"/>
+                <element label="Medium Confidence" value="medium"/>
+                <element label="No Match" value="none"/>
+            </choice>
+        </element>
         <element label="Match Serial" max_length="40" name="match_serial" type="string"/>
         <element label="Match Tag" max_length="40" name="match_tag" type="string"/>
         <element label="Match Tag Description" max_length="40" name="match_tag_description" type="string"/>
@@ -40,11 +41,35 @@
         <element label="Match Tag Model" max_length="40" name="match_tag_model" type="string"/>
         <element choice="1" label="Match Type" max_length="40" name="match_type" type="choice">
             <choice>
-                <element label="Perfect" value="Perfect"/>
+                <element label="Direct" value="DirectMatch"/>
+                <element label="Indirect" value="IndirectMatch"/>
+                <element label="Likely Type 1" value="LikelyType1"/>
+                <element label="Likely Type 2" value="LikelyType2"/>
+                <element label="Logical" value="LogicalMatch"/>
+                <element label="Mismatch Type 1" value="MismatchType1"/>
+                <element label="Mismatch Type 2" value="MismatchType2"/>
+                <element label="Mismatch Type 3" value="MismatchType3"/>
+                <element label="Mismatch Type 4" value="MismatchType4"/>
+                <element label="Mismatch Type 5" value="MismatchType5"/>
+                <element label="Mismatch Type 6" value="MismatchType6"/>
+                <element label="Mismatch Type 7" value="MismatchType7"/>
+                <element label="Mismatch Type 8" value="MismatchType8"/>
+                <element label="No Recorded Serial Number" value="NoRecordedSerialNumber"/>
+                <element label="Not Used Not Provided" value="NotUsedNotProvided"/>
+                <element label="Perfect" value="PerfectMatch"/>
+                <element label="Recorded No Match" value="RecordedNoMatch"/>
+                <element label="Unrecorded No Match" value="UnrecordedNoMatch"/>
             </choice>
         </element>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="Tracked" max_length="40" name="tracked" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Previous CI State" max_length="40" name="previous_ci_state" read_only="true" type="string"/>
+        <element label="Tracked" max_length="8" name="tracked" type="boolean"/>
         <element label="Veridy ID" max_length="40" name="veridy_id" type="string"/>
+        <index name="index">
+            <element name="matching_ci"/>
+        </index>
+        <index name="index2">
+            <element name="actual_serial"/>
+        </index>
     </element>
 </database>

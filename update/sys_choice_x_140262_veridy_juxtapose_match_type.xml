@@ -6,6 +6,291 @@
             <element>match_type</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Direct</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:07:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c89d61614f7213009be84e318110c7f1</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:16:03</sys_updated_on>
+            <value>DirectMatch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Indirect</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:07:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ecad29214f7213009be84e318110c7ea</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:16:09</sys_updated_on>
+            <value>IndirectMatch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Likely Type 1</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:20:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5490fd254f7213009be84e318110c7a5</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:20:52</sys_updated_on>
+            <value>LikelyType1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Likely Type 2</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:21:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06c079e14f7213009be84e318110c7bf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:21:44</sys_updated_on>
+            <value>LikelyType2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Logical</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:08:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4fbd61614f7213009be84e318110c721</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:16:20</sys_updated_on>
+            <value>LogicalMatch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 1</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:18:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dd1071614f7213009be84e318110c7f5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:18:41</sys_updated_on>
+            <value>MismatchType1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 2</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:18:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3920b5e14f7213009be84e318110c786</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:18:56</sys_updated_on>
+            <value>MismatchType2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 3</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:19:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>753079254f7213009be84e318110c786</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:19:13</sys_updated_on>
+            <value>MismatchType3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 4</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:19:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7140fda14f7213009be84e318110c7ed</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:19:26</sys_updated_on>
+            <value>MismatchType4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 5</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:19:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>095071614f7213009be84e318110c7f6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:19:41</sys_updated_on>
+            <value>MismatchType5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 6</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:19:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7460f1e14f7213009be84e318110c706</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:19:57</sys_updated_on>
+            <value>MismatchType6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 7</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:20:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f0703d254f7213009be84e318110c78a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:20:11</sys_updated_on>
+            <value>MismatchType7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mismatch Type 8</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:20:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ff7079e14f7213009be84e318110c7b9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:20:28</sys_updated_on>
+            <value>MismatchType8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>No Recorded Serial Number</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:21:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>47d0bd254f7213009be84e318110c703</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:22:08</sys_updated_on>
+            <value>NoRecordedSerialNumber</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not Used Not Provided</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:09:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0acde1e14f7213009be84e318110c704</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:17:43</sys_updated_on>
+            <value>NotUsedNotProvided</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Perfect</label>
             <language>en</language>
             <name>x_140262_veridy_juxtapose</name>
@@ -15,10 +300,48 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>dfcb02144ff213009be84e318110c77f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:07:21</sys_updated_on>
-            <value>Perfect</value>
+            <sys_updated_on>2018-06-19 15:15:36</sys_updated_on>
+            <value>PerfectMatch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Recorded No Match</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:11:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f2fd29e14f7213009be84e318110c7e4</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:17:55</sys_updated_on>
+            <value>RecordedNoMatch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>match_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unrecorded No Match</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-19 15:18:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>487e29e14f7213009be84e318110c7d6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-19 15:18:24</sys_updated_on>
+            <value>UnrecordedNoMatch</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>match_type</element>

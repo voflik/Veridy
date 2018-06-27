@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>juxtapose</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var entry;
+	var id;
+	var batchNumber;
+	
+	var requestData = request.body.data; //May be an array or a single object
+	
+	try {
+		//Creates a unique hash (Veridy ID) to prevent duplicate JSON loads
+		batchNumber = new HashAlgorithm().createHashKey(requestData);
+
+		var batchDiff = new GlideRecord('x_140262_veridy_juxtapose');
+		batchDiff.addQuery('veridy_id',batchNumber); 
+		batchDiff.query();
+
+		if(batchDiff.next()) {
+			gs.info('Veridy has found an identical batch pushed to the system. Current batch import cancelled.');
+		} else if(requestData instanceof Array) { 
+			for(var i = 0; i < requestData.length; i++) {
+				var j;
+				var currentFieldName;
+				var currentFieldValue;
+				var requestDataKeys = Object.keys(requestData[i]);
+
+				var arrRec = new GlideRecord('x_140262_veridy_juxtapose');
+				arrRec.initialize();
+
+				for (j = 0; j < requestDataKeys.length; j++) {
+					currentFieldName = requestDataKeys[j];
+					currentFieldValue = requestData[i][requestDataKeys[j]];
+                    arrRec.setValue(currentFieldName, currentFieldValue);
+				}
+				arrRec.veridy_id = batchNumber;
+				arrRec.insert();
+			}
+		} 
+
+		new VeridyUtils().matchJuxtaposeToCMDB(batchNumber);
+	}
+	catch(err) {
+		gs.error("Failed import of RetireIT records. " + err);
+	}
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_140262_veridy/veridy/juxtapose</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/juxtapose</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>JLee</sys_created_by>
+        <sys_created_on>2018-06-18 17:29:13</sys_created_on>
+        <sys_id>0f5489d14fb213009be84e318110c706</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>juxtapose</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>sys_ws_operation_0f5489d14fb213009be84e318110c706</sys_update_name>
+        <sys_updated_by>JLee</sys_updated_by>
+        <sys_updated_on>2018-06-25 13:43:30</sys_updated_on>
+        <web_service_definition display_value="veridy">f38381d14fb213009be84e318110c76b</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -5,13 +5,13 @@
             <element>match_serial</element>
             <position>0</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>7d4dce144ff213009be84e318110c7e7</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5d20734e4ffa13009be84e318110c7d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>match_tag</element>
             <position>1</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>fd4dce144ff213009be84e318110c7e7</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>dd20734e4ffa13009be84e318110c7d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>match_class</element>
             <position>2</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>714dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5120734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>match_class_match</element>
             <position>3</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>f14dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>d120734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>tracked</element>
             <position>4</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>754dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5520734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -75,13 +75,13 @@
             <element>.split</element>
             <position>5</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>f54dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>d520734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -89,13 +89,13 @@
             <element>match_type</element>
             <position>6</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>794dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5920734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -103,13 +103,13 @@
             <element>matched</element>
             <position>7</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>f94dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>d920734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -117,13 +117,13 @@
             <element>match_tag_manufacturer</element>
             <position>8</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>7d4dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5d20734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -131,13 +131,13 @@
             <element>match_tag_description</element>
             <position>9</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>fd4dce144ff213009be84e318110c7e8</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>dd20734e4ffa13009be84e318110c7d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -145,13 +145,69 @@
             <element>match_tag_model</element>
             <position>10</position>
             <sys_created_by>DMann</sys_created_by>
-            <sys_created_on>2018-06-15 20:13:24</sys_created_on>
-            <sys_id>714dce144ff213009be84e318110c7e9</sys_id>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5120734e4ffa13009be84e318110c7d7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
             <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-15 20:13:24</sys_updated_on>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>matching_ci</element>
+            <position>11</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>d120734e4ffa13009be84e318110c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>match_confidence</element>
+            <position>12</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5520734e4ffa13009be84e318110c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>calculated_confidence_level</element>
+            <position>13</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>d520734e4ffa13009be84e318110c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>previous_ci_state</element>
+            <position>14</position>
+            <sys_created_by>DMann</sys_created_by>
+            <sys_created_on>2018-06-21 13:54:43</sys_created_on>
+            <sys_id>5920734e4ffa13009be84e318110c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
+            <sys_updated_by>DMann</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:54:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

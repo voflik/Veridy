@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_140262_veridy.HashAlgorithm</api_name>
+        <client_callable>false</client_callable>
+        <description>Holds the logic to handle the creation of the hash</description>
+        <name>HashAlgorithm</name>
+        <script><![CDATA[var HashAlgorithm = Class.create();
+HashAlgorithm.prototype = {
+    initialize: function() {
+		
+		
+    },
+	
+	//main function
+	//input: JSON body
+	//output: 40 char hash of input
+	createHashKey: function(input){
+
+		var inputString = "";
+
+		for(var i = 0; i < input.length; i++){
+			// Remove dashes from the expected tag field
+			inputString += (input[i].expected_tag).replace(/-/g, ""); 
+		}
+
+		// Populates an array of randomized hashes by calling the toBinary function
+		var hash = [];
+		hash[0] = this.toBinary("67452301", 4);
+		hash[1] = this.toBinary("EFCDAB89", 4);
+		hash[2] = this.toBinary("98BADCFE", 4);
+		hash[3] = this.toBinary("10325476", 4);
+		hash[4] = this.toBinary("C3D2E1F0", 4);
+
+		var binaryString = this.toBinary(inputString, 32);
+		binaryString += "1";
+
+		// Add padding so  -48 === binaryString.length % 512 is true
+		var padding = 448 - (binaryString.length % 512);
+		for (var p = 0; p < padding; p++) {
+			binaryString += "0";
+		}
+
+		// Appends the length of the input string as a binary string
+		binaryString += this.getLength(input.length);
+
+		// Break the binary string into groups of 16, 32 bit chunks
+		var groups = [];
+		for(i = 0; i < (binaryString.length / 512); i++) {
+			var chunk = binaryString.substring(i * 512, ((i + 1) * 512));
+			var chunkGroup = [];
+
+			for(var j = 0; j < (chunk.length / 32); j++) {
+				chunkGroup.push(chunk.substring(j * 32, (j + 1) * 32));
+			}
+			groups.push(chunkGroup);
+		}
+
+		// Expanding 16, 32 bit chunks to 80, 32 bit chunks
+		
+		for(i = 0; i < groups.length; i++){
+			for(var z = 16; z < 80; z++) {		
+				var t = this.xor(this.xor(groups[i][z - 3], groups[i][z - 8]), this.xor(groups[i][z - 14], groups[i][z - 16]));
+				groups[i].push(t);
+			}
+		}
+
+		
+		/** Begin main hash construction loop **/ 
+		var a = hash[0];
+		var b = hash[1];
+		var c = hash[2];
+		var d = hash[3];
+		var e = hash[4];
+		var k = "";
+
+		// The main loop generates randomness by performing bitwise operations
+		// using a waterfall technique to fake randomness
+		var y = 0;
+		for(i = 0; i < groups.length; i++){
+			for (y = 0; y < groups[i].length; y++) {
+
+				if(y < 20) {
+					k = this.or(this.and(b,c), this.and(this.not(b),d));
+				} else if(y < 40) {
+					k = this.xor(this.xor(b,c), this.xor(c,d));
+				} else if(y < 60) {
+					k = this.or(this.or(this.and(b,c), this.and(b,d)),this.and(c,d));
+				} else {
+					k = this.xor(this.xor(b,c), this.xor(c,d));
+				}
+
+				var temp = this.add(this.add(this.add(a,k),this.add(e,k)),groups[i][y]);
+
+				e = d;
+				d = c;
+				c = b;
+				b = a;
+				a = temp;
+			}
+
+			hash[0] = this.add(hash[0], a);
+			hash[1] = this.add(hash[1], b);
+			hash[2] = this.add(hash[2], c);
+			hash[3] = this.add(hash[3], d);
+			hash[4] = this.add(hash[4], e);
+		}
+
+		//returns a 40 char hexidecimal string
+		return this.toText(hash[0] + hash[1] + hash[2] + hash[3] + hash[4]);	
+	},
+	
+	// Converts letter to ascii number
+	toAscii: function(letter) {
+	   return letter.charCodeAt(0);
+	},
+
+	// Converts text to a binary string with characters of length "l"
+	toBinary: function(str, l) {
+		var binaryMessage = "";
+
+		for(var i = 0; i < str.length; i++){
+			var ascNumber = this.toAscii(str[i]);
+
+			var ascBinary = ascNumber.toString(2);
+			var padding = "";
+
+			for (var j = 0; j < l - ascBinary.length; j++) {
+				padding += "0";
+			}
+			padding += ascBinary;
+			binaryMessage += padding;
+		}
+
+		return binaryMessage;
+	},
+
+	// Converts binary string to hexidecimal string
+	toText: function(binaryString){
+
+		var hexString = "";
+
+		for(var i = 0; i < binaryString.length / 4; i++){
+			var word = binaryString.slice(i * 4, ((i + 1) * 4));
+			hexString += parseInt(word, 2).toString(16);
+		}
+
+		return hexString;
+	},
+
+	// Returns the length of the input string as a binary string
+	getLength: function(inputLength) {
+
+		var binaryString = inputLength.toString(2);
+		var padding = "";
+
+		for(var i = 0; i < 64 - binaryString.length; i++) {
+			padding += "0";
+		}
+		padding += binaryString;
+		return padding;
+	},
+
+	// The rest of the functions take equal length binary strings and perform a given operation
+	add: function(b1, b2){
+
+		var ret = "";
+
+		var overflow = 0;
+		for(var i = 0; i <= b1.length; i++) {
+
+			var c1 = b1.charAt(b1.length - i);
+			var c2 = b2.charAt(b2.length - i);
+
+			if(c1 == '0' && c2 == '0') {
+				if(overflow == 1){
+					ret += '1';
+					overflow = 0;
+				} else {
+					ret += '0';
+					overflow = 0;
+				}
+			}
+
+			if(c1 == '0' && c2 == '1') {
+				if(overflow == 1) {
+					ret += '0';
+					overflow = 1;
+				} else {
+					ret += '1';
+					overflow = 0;
+				}
+			}
+
+			if(c1 == '1' && c2 == '0') {
+				if(overflow == 1) {
+					ret += '0';
+					overflow = 1;
+				} else {
+					ret += '1';
+					overflow = 0;
+				}
+			}
+
+			if(c1 == '1' && c2 == '1') {
+				if(overflow == 1) {
+					ret += '1';
+					overflow = 1;
+				} else {
+					ret += '0';
+					overflow = 1;
+				}
+			}
+		}
+		
+		return ret.split("").reverse().join("");
+	},
+	
+	// and Binary string function
+	and: function(b1, b2) {
+
+		var ret = "";
+
+		for(var i = 0; i < b1.length; i++) {
+
+			var c1 = b1.charAt(i);
+			var c2 = b2.charAt(i);
+
+			if(c1 == '0' && c2 == '0') {
+				ret += '0';
+			}
+
+			if(c1 == '0' && c2 == '1') {
+				ret += '0';
+			}
+
+
+			if(c1 == '1' && c2 == '0') {
+				ret += '0';
+			}
+
+
+			if(c1 == '1' && c2 == '1') {
+				ret += '1';
+			}
+		}
+
+		return ret;
+	},
+
+	// xor Binary String function
+	xor: function(b1, b2) {
+
+		var ret = "";
+
+		for(var i = 0; i < b1.length; i++) {
+
+			var c1 = b1.charAt(i);
+			var c2 = b2.charAt(i);
+
+			if(c1 == '0' && c2 == '0') {
+				ret += '0';
+			}
+
+			if(c1 == '0' && c2 == '1') {
+				ret += '1';
+			}
+
+			if(c1 == '1' && c2 == '0') {
+				ret += '1';
+			}
+
+			if(c1 == '1' && c2 == '1') {
+				ret += '0';
+			}
+		}
+
+		return ret;
+	},
+
+	// or Binary string function
+	or: function(b1, b2) {
+
+		var ret = "";
+
+		for(var i = 0; i < b1.length; i++) {
+			var c1 = b1.charAt(i);
+			var c2 = b2.charAt(i);
+
+			if(c1 == '0' && c2 == '0') {
+				ret += '0';
+			}
+
+			if(c1 == '0' && c2 == '1') {
+				ret += '1';
+			}
+
+			if(c1 == '1' && c2 == '0') {
+				ret += '1';
+			}
+
+			if(c1 == '1' && c2 == '1') {
+				ret += '1';
+			}
+		}
+
+		return ret;
+	},
+
+	// not Binary string function
+	not: function(b) {
+		var ret = "";
+		for(var i = 0; i < b.length; i++) {
+			if(b.charAt(i) == '0') {
+				ret += '1';
+			} else {
+				ret += '0';
+			}
+		}
+		return ret;
+	},
+
+    type: 'HashAlgorithm'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>AFurgiuele</sys_created_by>
+        <sys_created_on>2018-06-20 18:27:48</sys_created_on>
+        <sys_id>ecf42bf14ff213009be84e318110c746</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>HashAlgorithm</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>sys_script_include_ecf42bf14ff213009be84e318110c746</sys_update_name>
+        <sys_updated_by>DMann</sys_updated_by>
+        <sys_updated_on>2018-06-27 14:01:30</sys_updated_on>
+    </sys_script_include>
+</record_update>

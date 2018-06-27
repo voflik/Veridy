@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Juxtapose to CMDB Field Mapping">eeb735154f3613009be84e318110c7c0</category>
+        <order>300</order>
+        <property display_value="x_140262_veridy.ci_match.field.asset_tag" name="x_140262_veridy.ci_match.field.asset_tag">e7a87d154f3613009be84e318110c7fe</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>DMann</sys_created_by>
+        <sys_created_on>2018-06-19 00:49:59</sys_created_on>
+        <sys_id>ba596edd4f7613009be84e318110c7cf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_140262_veridy.ci_match.field.asset_tag.Juxtapose to CMDB Field Mapping</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_ba596edd4f7613009be84e318110c7cf</sys_update_name>
+        <sys_updated_by>DMann</sys_updated_by>
+        <sys_updated_on>2018-06-19 00:50:23</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

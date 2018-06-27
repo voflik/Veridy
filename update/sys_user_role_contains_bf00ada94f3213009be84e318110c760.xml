@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_140262_veridy.juxtapose_user" name="x_140262_veridy.juxtapose_user">4f69c99c4f3213009be84e318110c7d5</contains>
+        <role display_value="x_140262_veridy.juxtapose_admin" name="x_140262_veridy.juxtapose_admin">f5df91e94f3213009be84e318110c797</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>DMann</sys_created_by>
+        <sys_created_on>2018-06-19 14:08:14</sys_created_on>
+        <sys_id>bf00ada94f3213009be84e318110c760</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_140262_veridy.juxtapose_user.x_140262_veridy.juxtapose_admin</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>sys_user_role_contains_bf00ada94f3213009be84e318110c760</sys_update_name>
+        <sys_updated_by>DMann</sys_updated_by>
+        <sys_updated_on>2018-06-19 14:08:14</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

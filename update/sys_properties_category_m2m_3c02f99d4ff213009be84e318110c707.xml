@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Confidence Level Threshold">498eedd94ff213009be84e318110c78c</category>
+        <order>300</order>
+        <property display_value="x_140262_veridy.ci_match.low_confidence_threshold" name="x_140262_veridy.ci_match.low_confidence_threshold">7b01b95d4ff213009be84e318110c7a7</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>DMann</sys_created_by>
+        <sys_created_on>2018-06-18 20:48:11</sys_created_on>
+        <sys_id>3c02f99d4ff213009be84e318110c707</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_140262_veridy.ci_match.low_confidence_threshold.Confidence Level Threshold</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_3c02f99d4ff213009be84e318110c707</sys_update_name>
+        <sys_updated_by>DMann</sys_updated_by>
+        <sys_updated_on>2018-06-18 20:48:11</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

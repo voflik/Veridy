@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2018-06-19 17:27:11</change_date>
+        <changed_by display_value="John Lee">033770544f3213009be84e318110c7f1</changed_by>
+        <content display_value="IT Operations Management Guided Setup">f52f9c00c31022007bf1bea192d3aef8</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>JLee</sys_created_by>
+        <sys_created_on>2018-06-19 17:27:11</sys_created_on>
+        <sys_id>8a9d46e54fb213009be84e318110c77f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2018-06-19 17:27:11</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>gsw_change_log_8a9d46e54fb213009be84e318110c77f</sys_update_name>
+        <sys_updated_by>JLee</sys_updated_by>
+        <sys_updated_on>2018-06-19 17:27:11</sys_updated_on>
+        <type>1</type>
+    </gsw_change_log>
+</record_update>
