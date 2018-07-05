@@ -20,11 +20,17 @@ HashAlgorithm.prototype = {
 	createHashKey: function(input){
 
 		var inputString = "";
-
-		for(var i = 0; i < input.length; i++){
-			// Remove dashes from the expected tag field
-			inputString += (input[i].expected_tag).replace(/-/g, ""); 
+		try{
+			for(var i = 0; i < input.length; i++){
+				// Remove dashes from the expected tag field
+				inputString += (input[i].expected_tag).replace(/-/g, ""); 
+			}
 		}
+		catch(err){
+			gs.info(err);
+		}
+		
+	
 
 		// Populates an array of randomized hashes by calling the toBinary function
 		var hash = [];
@@ -44,8 +50,13 @@ HashAlgorithm.prototype = {
 		}
 
 		// Appends the length of the input string as a binary string
-		binaryString += this.getLength(input.length);
-
+		try{
+			binaryString += this.getLength(input.length);
+		}catch(err){
+			binaryString += "0000000000000000000000000000000000000000000000000000000000000001";
+		}
+	
+		
 		// Break the binary string into groups of 16, 32 bit chunks
 		var groups = [];
 		for(i = 0; i < (binaryString.length / 512); i++) {
@@ -59,14 +70,15 @@ HashAlgorithm.prototype = {
 		}
 
 		// Expanding 16, 32 bit chunks to 80, 32 bit chunks
-		
-		for(i = 0; i < groups.length; i++){
+	
+		for(var i = 0; i < groups.length; i++){
 			for(var z = 16; z < 80; z++) {		
 				var t = this.xor(this.xor(groups[i][z - 3], groups[i][z - 8]), this.xor(groups[i][z - 14], groups[i][z - 16]));
 				groups[i].push(t);
 			}
 		}
 
+	
 		
 		/** Begin main hash construction loop **/ 
 		var a = hash[0];
@@ -107,7 +119,8 @@ HashAlgorithm.prototype = {
 			hash[3] = this.add(hash[3], d);
 			hash[4] = this.add(hash[4], e);
 		}
-
+		gs.info("~~~~~~~~~~~~~4");
+		
 		//returns a 40 char hexidecimal string
 		return this.toText(hash[0] + hash[1] + hash[2] + hash[3] + hash[4]);	
 	},
@@ -165,8 +178,13 @@ HashAlgorithm.prototype = {
 
 	// The rest of the functions take equal length binary strings and perform a given operation
 	add: function(b1, b2){
-
+		if(b1 == undefined){
+			return "00000000000000000000000000000000";
+		}
+		
 		var ret = "";
+		b1 = b1.toString();
+		b2 = b2.toString();
 
 		var overflow = 0;
 		for(var i = 0; i <= b1.length; i++) {
@@ -221,8 +239,13 @@ HashAlgorithm.prototype = {
 	// and Binary string function
 	and: function(b1, b2) {
 
+		if(b1 == undefined){
+			return "00000000000000000000000000000000";
+		}
+		
 		var ret = "";
-
+		b1 = b1.toString();
+		b2 = b2.toString();
 		for(var i = 0; i < b1.length; i++) {
 
 			var c1 = b1.charAt(i);
@@ -254,7 +277,14 @@ HashAlgorithm.prototype = {
 	xor: function(b1, b2) {
 
 		var ret = "";
-
+		if(b1 == undefined){
+			return "00000000000000000000000000000000";
+		}
+		
+		
+		b1 = b1.toString();
+		b2 = b2.toString();
+		
 		for(var i = 0; i < b1.length; i++) {
 
 			var c1 = b1.charAt(i);
@@ -283,8 +313,13 @@ HashAlgorithm.prototype = {
 	// or Binary string function
 	or: function(b1, b2) {
 
+		if(b1 == undefined){
+			return "00000000000000000000000000000000";
+		}
+		
 		var ret = "";
-
+		b1 = b1.toString();
+		b2 = b2.toString();
 		for(var i = 0; i < b1.length; i++) {
 			var c1 = b1.charAt(i);
 			var c2 = b2.charAt(i);
@@ -311,7 +346,13 @@ HashAlgorithm.prototype = {
 
 	// not Binary string function
 	not: function(b) {
+		if(b == undefined){
+			return "00000000000000000000000000000000";
+		}
+		
 		var ret = "";
+		b = b.toString();
+		
 		for(var i = 0; i < b.length; i++) {
 			if(b.charAt(i) == '0') {
 				ret += '1';
@@ -329,13 +370,13 @@ HashAlgorithm.prototype = {
         <sys_created_by>AFurgiuele</sys_created_by>
         <sys_created_on>2018-06-20 18:27:48</sys_created_on>
         <sys_id>ecf42bf14ff213009be84e318110c746</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>83</sys_mod_count>
         <sys_name>HashAlgorithm</sys_name>
         <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
         <sys_update_name>sys_script_include_ecf42bf14ff213009be84e318110c746</sys_update_name>
-        <sys_updated_by>DMann</sys_updated_by>
-        <sys_updated_on>2018-06-27 14:01:30</sys_updated_on>
+        <sys_updated_by>AFurgiuele</sys_updated_by>
+        <sys_updated_on>2018-07-05 18:38:39</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -45,20 +45,20 @@
                 <element label="Indirect" value="IndirectMatch"/>
                 <element label="Likely Type 1" value="LikelyType1"/>
                 <element label="Likely Type 2" value="LikelyType2"/>
-                <element label="Logical" value="LogicalMatch"/>
-                <element label="Mismatch Type 1" value="MismatchType1"/>
-                <element label="Mismatch Type 2" value="MismatchType2"/>
-                <element label="Mismatch Type 3" value="MismatchType3"/>
-                <element label="Mismatch Type 4" value="MismatchType4"/>
-                <element label="Mismatch Type 5" value="MismatchType5"/>
-                <element label="Mismatch Type 6" value="MismatchType6"/>
-                <element label="Mismatch Type 7" value="MismatchType7"/>
-                <element label="Mismatch Type 8" value="MismatchType8"/>
-                <element label="No Recorded Serial Number" value="NoRecordedSerialNumber"/>
-                <element label="Not Used Not Provided" value="NotUsedNotProvided"/>
-                <element label="Perfect" value="PerfectMatch"/>
-                <element label="Recorded No Match" value="RecordedNoMatch"/>
-                <element label="Unrecorded No Match" value="UnrecordedNoMatch"/>
+                <element label="Logical" value="Logical"/>
+                <element label="Mismatch Type 1" value="Mismatch Type 1"/>
+                <element label="Mismatch Type 2" value="Mismatch Type 2"/>
+                <element label="Mismatch Type 3" value="Mismatch Type 3"/>
+                <element label="Mismatch Type 4" value="Mismatch Type 4"/>
+                <element label="Mismatch Type 5" value="Mismatch Type 5"/>
+                <element label="Mismatch Type 6" value="Mismatch Type 6"/>
+                <element label="Mismatch Type 7" value="Mismatch Type 7"/>
+                <element label="Mismatch Type 8" value="Mismatch Type 8"/>
+                <element label="No Recorded Serial Number" value="No Recorded Serial Number"/>
+                <element label="Not Used Not Provided" value="Not Used Not Provided"/>
+                <element label="Perfect" value="Perfect"/>
+                <element label="Recorded No Match" value="Recorded No Match"/>
+                <element label="Unrecorded No Match" value="Unrecorded No Match"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
