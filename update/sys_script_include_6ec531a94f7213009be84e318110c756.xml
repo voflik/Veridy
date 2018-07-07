@@ -49,11 +49,11 @@ VeridyUtils.prototype = {
 			nodesJuxtapose.push(
 				this.createNode(
 					grJuxtapose.getValue("sys_id"), 
-					grJuxtapose.getValue("actual_tag"), 
-					grJuxtapose.getValue("actual_serial"), 
-					grJuxtapose.getValue("actual_model"), 
-					grJuxtapose.getValue("actual_manufacturer"), 
-					grJuxtapose.getValue("actual_class") 
+					grJuxtapose.getValue("expected_tag"), 
+					grJuxtapose.getValue("expected_serial"), 
+					grJuxtapose.getValue("expected_model"), 
+					grJuxtapose.getValue("expected_manufacturer"), 
+					grJuxtapose.getValue("expected_class") 
 				)
 			);
 		}
@@ -127,21 +127,47 @@ VeridyUtils.prototype = {
 						grJuxtapose.setValue("match_confidence", "high");
 						grJuxtapose.setValue("matching_ci", finalConnections[i].cmdbRecordId);
 						grJuxtapose.setValue("calculated_confidence_level", finalConnections[i].weight);
+						
+						//setting the reccomendation field
+						
+						if( grJuxtapose.match_type =="Perfect" ||
+						   grJuxtapose.match_type =="Mismatch Type 1"||
+						   grJuxtapose.match_type == "Logical"||
+						   grJuxtapose.match_type == "Mismatch Type 3" ||
+						   grJuxtapose.match_type =="IndirectMatch" ||
+						   grJuxtapose.match_type =="LikelyType1" ||
+						   grJuxtapose.match_type =="LikelyType2" ||
+						   grJuxtapose.match_type =="DirectMatch"){
+							
+							grJuxtapose.setValue("recommendation", 20);
+						
+						}else{
+							
+							grJuxtapose.setValue("recommendation", 10);
+						
+						}
+						
+						
 					} else if(finalConnections[i].weight >= this.mediumConfidence) {
 						grJuxtapose.setValue("match_confidence", "medium");
 						grJuxtapose.setValue("matching_ci", finalConnections[i].cmdbRecordId);
 						grJuxtapose.setValue("calculated_confidence_level", finalConnections[i].weight);
+						grJuxtapose.setValue("recommendation", 10);
 					} else if(finalConnections[i].weight >= this.lowConfidence) {
 						grJuxtapose.setValue("match_confidence", "low");
 						grJuxtapose.setValue("matching_ci", finalConnections[i].cmdbRecordId);
 						grJuxtapose.setValue("calculated_confidence_level", finalConnections[i].weight);
+						grJuxtapose.setValue("recommendation", 10);
+						
 					} else {
 						grJuxtapose.setValue("match_confidence", "none");				
-						grJuxtapose.setValue("calculated_confidence_level", finalConnections[i].weight);				
+						grJuxtapose.setValue("calculated_confidence_level", finalConnections[i].weight);
+						grJuxtapose.setValue("recommendation", 10);
 					}
 
 					grJuxtapose.update();
 	
+					/*
 					// If the Auto Update property is true retire that CI and save it's previous state
 					var prevState = ""; // Holds previous state
 					if(this.autoUpdateCMDB === "true" && grJuxtapose.match_confidence == "high" && grJuxtapose.match_type == "Perfect") {
@@ -149,6 +175,8 @@ VeridyUtils.prototype = {
 						grJuxtapose.setValue("previous_ci_state", prevState);
 						grJuxtapose.update();
 					}
+					*/
+					
 				}
 			}
 		}
@@ -285,13 +313,13 @@ VeridyUtils.prototype = {
         <sys_created_by>AFurgiuele</sys_created_by>
         <sys_created_on>2018-06-19 15:46:21</sys_created_on>
         <sys_id>6ec531a94f7213009be84e318110c756</sys_id>
-        <sys_mod_count>232</sys_mod_count>
+        <sys_mod_count>235</sys_mod_count>
         <sys_name>VeridyUtils</sys_name>
         <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
         <sys_update_name>sys_script_include_6ec531a94f7213009be84e318110c756</sys_update_name>
-        <sys_updated_by>JLee</sys_updated_by>
-        <sys_updated_on>2018-07-05 20:33:47</sys_updated_on>
+        <sys_updated_by>AFurgiuele</sys_updated_by>
+        <sys_updated_on>2018-07-06 19:31:08</sys_updated_on>
     </sys_script_include>
 </record_update>

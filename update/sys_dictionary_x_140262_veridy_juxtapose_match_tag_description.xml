@@ -54,7 +54,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>DMann</sys_created_by>
         <sys_created_on>2018-06-15 15:57:25</sys_created_on>
-        <sys_id>ee12599c4f3213009be84e318110c75e</sys_id>
+        <sys_id>a4a30e874f4f13009be84e318110c76a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Match Tag Description</sys_name>
         <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
@@ -62,7 +62,7 @@
         <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
         <sys_update_name>sys_dictionary_x_140262_veridy_juxtapose_match_tag_description</sys_update_name>
         <sys_updated_by>DMann</sys_updated_by>
-        <sys_updated_on>2018-06-15 15:57:25</sys_updated_on>
+        <sys_updated_on>2018-07-06 18:51:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

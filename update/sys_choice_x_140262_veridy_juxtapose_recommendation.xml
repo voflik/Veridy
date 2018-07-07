@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="recommendation" table="x_140262_veridy_juxtapose" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>recommendation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Review</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>AFurgiuele</sys_created_by>
+            <sys_created_on>2018-07-06 19:18:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>de1ac20f4f4f13009be84e318110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>AFurgiuele</sys_updated_by>
+            <sys_updated_on>2018-07-06 19:18:45</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>recommendation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Retire</label>
+            <language>en</language>
+            <name>x_140262_veridy_juxtapose</name>
+            <sequence/>
+            <sys_created_by>AFurgiuele</sys_created_by>
+            <sys_created_on>2018-07-06 19:18:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>df2a060f4f4f13009be84e318110c77c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>AFurgiuele</sys_updated_by>
+            <sys_updated_on>2018-07-06 19:18:59</sys_updated_on>
+            <value>20</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>recommendation</element>
+            <name>x_140262_veridy_juxtapose</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>AFurgiuele</sys_created_by>
+            <sys_created_on>2018-07-06 19:18:45</sys_created_on>
+            <sys_id>0a2a060f4f4f13009be84e318110c77a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>recommendation</sys_name>
+            <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+            <sys_update_name>sys_choice_x_140262_veridy_juxtapose_recommendation</sys_update_name>
+            <sys_updated_by>AFurgiuele</sys_updated_by>
+            <sys_updated_on>2018-07-06 19:18:45</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

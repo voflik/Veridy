@@ -26,7 +26,7 @@
         <element label="Matching CI" max_length="32" name="matching_ci" reference="cmdb_ci" type="reference"/>
         <element label="Match Class" max_length="40" name="match_class" type="string"/>
         <element label="Match Class Match" max_length="40" name="match_class_match" type="boolean"/>
-        <element choice="1" label="Match Confidence" max_length="40" name="match_confidence" type="choice">
+        <element choice="1" label="CI Match Confidence" max_length="40" name="match_confidence" type="choice">
             <choice>
                 <element label="High Confidence" value="high"/>
                 <element label="Low Confidence" value="low"/>
@@ -63,6 +63,12 @@
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
         <element label="Previous CI State" max_length="40" name="previous_ci_state" read_only="true" type="string"/>
+        <element choice="1" label="Recommendation" max_length="10" name="recommendation" type="choice">
+            <choice>
+                <element label="Retire" value="20"/>
+                <element label="Review" value="10"/>
+            </choice>
+        </element>
         <element label="Tracked" max_length="8" name="tracked" type="boolean"/>
         <element label="Veridy ID" max_length="40" name="veridy_id" type="string"/>
         <index name="index">

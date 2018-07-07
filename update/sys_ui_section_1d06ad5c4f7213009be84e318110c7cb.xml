@@ -211,6 +211,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>recommendation</element>
+            <position>15</position>
+            <sys_created_by>AFurgiuele</sys_created_by>
+            <sys_created_on>2018-07-06 19:06:46</sys_created_on>
+            <sys_id>aa67c28b4f4f13009be84e318110c79c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_140262_veridy_juxtapose" sys_domain="global" view="Default view">1d06ad5c4f7213009be84e318110c7cb</sys_ui_section>
+            <sys_updated_by>AFurgiuele</sys_updated_by>
+            <sys_updated_on>2018-07-06 19:06:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
