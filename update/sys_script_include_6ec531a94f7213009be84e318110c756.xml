@@ -9,13 +9,13 @@
         <name>VeridyUtils</name>
         <script><![CDATA[var VeridyUtils = Class.create();
 VeridyUtils.prototype = {
-    initialize: function() {
+	initialize: function() {
 		// Field weights from system properties table
 		this.classWeight = parseInt(gs.getProperty("x_140262_veridy.ci_match.field_weight.class", 5));
 		this.manufacturerWeight = parseInt(gs.getProperty("x_140262_veridy.ci_match.field_weight.manufacturer", 6));
 		this.modelWeight = parseInt(gs.getProperty("x_140262_veridy.ci_match.field_weight.model", 12));
 		this.serialNumberWeight = parseInt(gs.getProperty("x_140262_veridy.ci_match.field_weight.serial_number", 51));
-		this.assetWeight = parseInt(gs.getProperty("x_140262_veridy.ci_match.field_weight.asset_tag", 26));		
+		this.assetWeight = parseInt(gs.getProperty("x_140262_veridy.ci_match.field_weight.asset_tag", 26));
 		
 		// Confidence Thresholds from the system properties table
 		this.highConfidence = gs.getProperty("x_140262_veridy.ci_match.high_confidence_threshold", 70);
@@ -24,14 +24,17 @@ VeridyUtils.prototype = {
 		
 		// Auto update CMDB property
 		this.autoUpdateCMDB = gs.getProperty("x_140262_veridy.ci_match.auto_update_cmdb", "false");
-    },
-
+		
+		
+		
+	},
+	
 	/*
-		main Function
-		performs the heuristic matching of juxtapose and CMDB items
-		input: 40 char veridy id 
-		output: returns "1" if successful
-	*/
+	main Function
+	performs the heuristic matching of juxtapose and CMDB items
+	input: 40 char veridy id
+	output: returns "1" if successful
+ 	*/
 	matchJuxtaposeToCMDB: function(veridy_id) {
 		
 		//edges are connections between the two node types
@@ -40,26 +43,26 @@ VeridyUtils.prototype = {
 		var nodesCMDB = [];
 		
 		//read in all items from Jux. table with veridy_id
-		var grJuxtapose = new GlideRecord("x_140262_veridy_juxtapose");		
+		var grJuxtapose = new GlideRecord("x_140262_veridy_juxtapose");
 		grJuxtapose.addQuery("veridy_id="+veridy_id);
 		grJuxtapose.query();
 		
 		//add them to Juxtapose nodes
 		while(grJuxtapose.next()) {
 			nodesJuxtapose.push(
-				this.createNode(
-					grJuxtapose.getValue("sys_id"), 
-					grJuxtapose.getValue("expected_tag"), 
-					grJuxtapose.getValue("expected_serial"), 
-					grJuxtapose.getValue("expected_model"), 
-					grJuxtapose.getValue("expected_manufacturer"), 
-					grJuxtapose.getValue("expected_class") 
-				)
+			this.createNode(
+			grJuxtapose.getValue("sys_id"),
+			grJuxtapose.getValue("expected_tag"),
+			grJuxtapose.getValue("expected_serial"),
+			grJuxtapose.getValue("expected_model"),
+			grJuxtapose.getValue("expected_manufacturer"),
+			grJuxtapose.getValue("expected_class")
+			)
 			);
 		}
-
 		
-		//read in all active items from CMDB 
+		
+		//read in all active items from CMDB
 		var grCi = new GlideRecord("cmdb_ci");
 		grCi.addActiveQuery();
 		grCi.addQuery("install_status!=7");
@@ -68,14 +71,14 @@ VeridyUtils.prototype = {
 		//add them to Cmdb nodes
 		while(grCi.next()) {
 			nodesCMDB.push(
-				this.createNode(
-					grCi.getValue("sys_id"), 
-					grCi.getValue("name"), 
-					grCi.getValue("serial_number"), 
-					grCi.model_id.name,
-					grCi.getDisplayValue("manufacturer"), 
-					grCi.getDisplayValue("sys_class_name")
-				)
+			this.createNode(
+			grCi.getValue("sys_id"),
+			grCi.getValue("asset_tag"),
+			grCi.getValue("serial_number"),
+			grCi.model_id.name,
+			grCi.getDisplayValue("manufacturer"),
+			grCi.sys_class_name
+			)
 			);
 		}
 		
@@ -86,17 +89,17 @@ VeridyUtils.prototype = {
 		for(i = 0; i < nodesJuxtapose.length; i++){
 			for(j = 0; j < nodesCMDB.length; j++){
 				edges.push(
-					this.createEdge(
-						nodesJuxtapose[i].id, 
-						nodesCMDB[j].id, 
-						this.computeConfidence(nodesJuxtapose[i], nodesCMDB[j])
-					)
+				this.createEdge(
+				nodesJuxtapose[i].id,
+				nodesCMDB[j].id,
+				this.computeConfidence(nodesJuxtapose[i], nodesCMDB[j])
+				)
 				);
 			}
 		}
-	
 		
-		//sort the matches 
+		
+		//sort the matches
 		this.sortAsc(edges);
 		
 		//finalConnections holds the matched edges
@@ -104,12 +107,12 @@ VeridyUtils.prototype = {
 		
 		/*
 		Traverses the edges array, picks the best connection for each item in the Juxtapose table, removes all other connections from the edge array
-		*/
+ 		*/
 		while(edges.length > 0 ) {
 			var top = edges[0];
 			finalConnections.push(top);
 			edges = this.remove(top, edges);
-
+			
 		}
 		
 		
@@ -122,7 +125,10 @@ VeridyUtils.prototype = {
 		//setting: calculated confience level, matched CI, and match confidence
 		while(grJuxtapose.next()) {
 			for(i = 0; i < finalConnections.length; i++) {
-				if(grJuxtapose.getValue("sys_id") == finalConnections[i].juxtaposeRecordId) {								
+				if(grJuxtapose.getValue("sys_id") == finalConnections[i].juxtaposeRecordId) {
+				
+								
+					
 					if(finalConnections[i].weight >= this.highConfidence) {
 						grJuxtapose.setValue("match_confidence", "high");
 						grJuxtapose.setValue("matching_ci", finalConnections[i].cmdbRecordId);
@@ -131,20 +137,18 @@ VeridyUtils.prototype = {
 						//setting the reccomendation field
 						
 						if( grJuxtapose.match_type =="Perfect" ||
-						   grJuxtapose.match_type =="Mismatch Type 1"||
-						   grJuxtapose.match_type == "Logical"||
-						   grJuxtapose.match_type == "Mismatch Type 3" ||
-						   grJuxtapose.match_type =="IndirectMatch" ||
-						   grJuxtapose.match_type =="LikelyType1" ||
-						   grJuxtapose.match_type =="LikelyType2" ||
-						   grJuxtapose.match_type =="DirectMatch"){
+							grJuxtapose.match_type =="Mismatch Type 1"||
+						grJuxtapose.match_type == "Logical"||
+						grJuxtapose.match_type == "Mismatch Type 3" ||
+						grJuxtapose.match_type =="IndirectMatch" ||
+						grJuxtapose.match_type =="LikelyType1" ||
+						grJuxtapose.match_type =="LikelyType2" ||
+						grJuxtapose.match_type =="DirectMatch"){
 							
 							grJuxtapose.setValue("recommendation", 20);
-						
-						}else{
 							
+						}else{
 							grJuxtapose.setValue("recommendation", 10);
-						
 						}
 						
 						
@@ -160,13 +164,13 @@ VeridyUtils.prototype = {
 						grJuxtapose.setValue("recommendation", 10);
 						
 					} else {
-						grJuxtapose.setValue("match_confidence", "none");				
+						grJuxtapose.setValue("match_confidence", "none");
 						grJuxtapose.setValue("calculated_confidence_level", finalConnections[i].weight);
 						grJuxtapose.setValue("recommendation", 10);
 					}
-
+					
 					grJuxtapose.update();
-	
+					
 					/*
 					// If the Auto Update property is true retire that CI and save it's previous state
 					var prevState = ""; // Holds previous state
@@ -175,28 +179,28 @@ VeridyUtils.prototype = {
 						grJuxtapose.setValue("previous_ci_state", prevState);
 						grJuxtapose.update();
 					}
-					*/
+ 					*/
 					
 				}
 			}
 		}
 		
-		return 1;		
+		return 1;
 	},
 	
-		
+	
 	//object that holds a record from cmdb or jux table
 	createNode: function(uid,tag, ser_num, model, manu, classT ) {
-		return {id: uid, tag: tag, serial: ser_num, model: model, manufacturer: manu, classType:classT};	
-	},
-	
+		return {id: uid, tag: tag, serial: ser_num, model: model, manufacturer: manu, classType:classT};
+		},
+		
 	//object that represents a connection between nodes
 	createEdge: function(juxtaposeSysId, cmdbSysId, edgeWeight) {
 		return {juxtaposeRecordId:juxtaposeSysId, cmdbRecordId:cmdbSysId, weight:edgeWeight};
 	},
-	
-		
-	//removes all edges from the "edges" array that contains a node from edge "e" 
+
+			
+	//removes all edges from the "edges" array that contains a node from edge "e"
 	remove:function(e,edges) {
 		var newList = [];
 
@@ -205,10 +209,10 @@ VeridyUtils.prototype = {
 				newList.push(edges[i]);
 			}
 		}
-		
+
 		return newList;
 	},
-	
+
 	//sorts the list of edges in ascending order of confidence
 	sortAsc:function(edges) {
 		edges.sort(function(a,b) {
@@ -216,42 +220,168 @@ VeridyUtils.prototype = {
 		});
 	},
 
-	//queries the system property table and computes the confidence 
+	//queries the system property table and computes the confidence
 	computeConfidence:function(juxtaposeNode,cmdbNode) {
-			var confidence = 0;
-		
-			if(juxtaposeNode.tag.toString().toLowerCase() == cmdbNode.tag.toString().toLowerCase() && 
-			   this.checkIgnoredStrings(juxtaposeNode.tag.toString())) {
-				confidence += this.assetWeight;
-			}	
-		
-			if(juxtaposeNode.serial != undefined && cmdbNode.serial != undefined){
-				if(juxtaposeNode.serial.toString().toLowerCase() == cmdbNode.serial.toString().toLowerCase() &&
-				   this.checkIgnoredStrings(juxtaposeNode.serial.toString())) {
-					confidence += this.serialNumberWeight;
-				}		
-			}
+		var confidence = 0;
 
-			/*
-			if(juxtaposeNode.model.toString().toLowerCase() == cmdbNode.model.toString().toLowerCase() && 
-			   this.checkIgnoredStrings(juxtaposeNode.model.toString())) {
-				confidence += this.modelWeight;
+		if(juxtaposeNode.tag.toString().toLowerCase() == cmdbNode.tag.toString().toLowerCase() &&
+		   this.checkIgnoredStrings(juxtaposeNode.tag.toString())) {
+			confidence += this.assetWeight;
+		}
+
+		if(juxtaposeNode.serial != undefined && cmdbNode.serial != undefined){
+			if(juxtaposeNode.serial.toString().toLowerCase() == cmdbNode.serial.toString().toLowerCase() &&
+			   this.checkIgnoredStrings(juxtaposeNode.serial.toString())) {
+				confidence += this.serialNumberWeight;
 			}
-			*/
-			if(juxtaposeNode.manufacturer.toString().toLowerCase() == cmdbNode.manufacturer.toString().toLowerCase() && 
-			   this.checkIgnoredStrings(juxtaposeNode.manufacturer.toString())) {
-				confidence += this.manufacturerWeight;
-			}
-			/*
-			if(juxtaposeNode.classType == cmdbNode.classType) {
-				confidence += this.classWeight;
-			}
-			*/
-		
+		}
+
+		/*
+				if(juxtaposeNode.model.toString().toLowerCase() == cmdbNode.model.toString().toLowerCase() &&
+					this.checkIgnoredStrings(juxtaposeNode.model.toString())) {
+					confidence += this.modelWeight;
+				}
+ 				*/
+		if(juxtaposeNode.manufacturer.toString().toLowerCase() == cmdbNode.manufacturer.toString().toLowerCase() &&
+		   this.checkIgnoredStrings(juxtaposeNode.manufacturer.toString())) {
+			confidence += this.manufacturerWeight;
+		}
+
+
+// 		if(juxtaposeNode.classType.toString().toLowerCase() == cmdbNode.classType.toString().toLowerCase() &&
+// 		   this.checkIgnoredStrings(juxtaposeNode.classType.toString())) {
+// 			confidence += this.classType;
+// 		}
+
+
+					if(juxtaposeNode.classType == "Phone"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.phone") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "PDA/Smart Phone"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.smart_phone") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Telecom"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.telecom") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Networking"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.network") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}		
+					else if(juxtaposeNode.classType == "Docking Station"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.docking") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}			
+					else if(juxtaposeNode.classType == "CRT"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.crt") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}				
+					else if(juxtaposeNode.classType == "LCD"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.lcd") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "LED"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.led") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "Scanner"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.scanner") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "Typewriter"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.typewriter") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "Unclassified"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.unclassified") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "Box"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.box") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "Other"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.other") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Used Not Provided"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.used-not-provided") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}				
+					else if(juxtaposeNode.classType == "Copier"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.copier") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}					
+					else if(juxtaposeNode.classType == "MFD"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.mfd") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}	
+					else if(juxtaposeNode.classType == "Printer"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.printer") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Fax"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.fax") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "UPS"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.ups") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Hard Drive"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.hard-drive") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Tape"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.tape") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Laptop"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.laptop") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "PC"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.pc") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+					else if(juxtaposeNode.classType == "Server"){
+						if(gs.getProperty("x_140262_veridy.ci_match.class.server") == cmdbNode.classType){
+							confidence += this.classWeight;
+						}
+					}
+
+
+
+
 		return confidence;
 	},
-	
-		//Checks for certain strings that should be excluded from the Confidence Match
+
+	//Checks for certain strings that should be excluded from the Confidence Match
 	checkIgnoredStrings: function(input){
 		var ignoreStrings = 'N/A NA N.A UNTAGGED NOT ISSUED UNRECORDED n/a na n.a untagged not issued unrecorded';
 		var result = ignoreStrings.indexOf(input);
@@ -262,38 +392,38 @@ VeridyUtils.prototype = {
 			return false;
 		}
 	},
-	
+
 	/**
-	* This method is triggered from the Retire UI Action on the Juxtapose table.
-	* The matched configuration item's status is updated to retired and it's previous 
-	* state is returned to the UI Action script
-	* 
-	* @param GlideRecord juxtapose The current object being passed from the UI Action
-	* @return String This returns the Configuration Item's previous state
-	*/
+ 			* This method is triggered from the Retire UI Action on the Juxtapose table.
+ 			* The matched configuration item's status is updated to retired and it's previous
+ 			* state is returned to the UI Action script
+ 			*
+ 			* @param GlideRecord juxtapose The current object being passed from the UI Action
+ 			* @return String This returns the Configuration Item's previous state
+ 			*/
 	retireConfigurationItem: function(grJuxtapose) {
 		var prevStatus = "";
 		var grConfigItem = new GlideRecord('cmdb_ci');
-		
+
 		if(grConfigItem.get(grJuxtapose.matching_ci)) {
 			prevStatus = grConfigItem.getValue('install_status') + ' - ' + grConfigItem.install_status.getDisplayValue();
 			grConfigItem.setValue('install_status', 7); // Set status to Retired
 			grConfigItem.update();
 		}
-		return prevStatus; 
+		return prevStatus;
 	},
-	
+
 	/**
-	* This method is triggered from the Rollback UI Action on the Juxtapose table.
-	* The matched configuration item's status is reverted back to it's previous status
-	* 
-	* @param GlideRecord grJuxtapose The current object being passed from the UI Action
-	* @return String This returns the Configuration Item's previous state
-	*/
+ 			* This method is triggered from the Rollback UI Action on the Juxtapose table.
+ 			* The matched configuration item's status is reverted back to it's previous status
+ 			*
+ 			* @param GlideRecord grJuxtapose The current object being passed from the UI Action
+ 			* @return String This returns the Configuration Item's previous state
+ 			*/
 	rollbackConfigurationItem: function(grJuxtapose) {
-		
+
 		var prevStatus = "";
-		var splitStatus = grJuxtapose.getValue('previous_ci_state'); 
+		var splitStatus = grJuxtapose.getValue('previous_ci_state');
 		splitStatus = splitStatus.split('-'); // Split the choice value from it's label
 		var rollbackStatus = splitStatus[0];  // Previous status' choice value
 		var grConfigItem = new GlideRecord('cmdb_ci');
@@ -305,21 +435,21 @@ VeridyUtils.prototype = {
 		}
 		return prevStatus;
 	},
-		
-    type: 'VeridyUtils'
+
+	type: 'VeridyUtils'
 };
 ]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>AFurgiuele</sys_created_by>
         <sys_created_on>2018-06-19 15:46:21</sys_created_on>
         <sys_id>6ec531a94f7213009be84e318110c756</sys_id>
-        <sys_mod_count>235</sys_mod_count>
+        <sys_mod_count>243</sys_mod_count>
         <sys_name>VeridyUtils</sys_name>
         <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
         <sys_update_name>sys_script_include_6ec531a94f7213009be84e318110c756</sys_update_name>
         <sys_updated_by>AFurgiuele</sys_updated_by>
-        <sys_updated_on>2018-07-06 19:31:08</sys_updated_on>
+        <sys_updated_on>2018-07-12 19:54:38</sys_updated_on>
     </sys_script_include>
 </record_update>

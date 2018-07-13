@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Veridy Expected items cmdb upload">0e8d8a744f4f13009be84e318110c74d</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	if(source.u_type == "Phone")
+		return "cmdb_ci_comm";
+	else if(source.u_type == "PDA/Smart Phone")
+		return "cmdb_ci_comm";
+	else if(source.u_type == "Telecom")
+		return "cmdb_ci_comm";
+	else if(source.u_type == "Networking")
+		return "cmdb_ci_netgear";
+	else if(source.u_type == "Docking Station")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "CRT")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "LCD")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "LED")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "Scanner")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "Typewriter")
+		return "cmdb_ci_acc";
+	else if(source.u_type == "Unclassified")
+		return "cmdb_ci_acc";
+	else if(source.u_type == "Box")
+		return "cmdb_ci_acc";
+	else if(source.u_type == "Other")
+		return "cmdb_ci_acc";
+	else if(source.u_type == "Used Not Provided")
+		return "cmdb_ci_acc";
+	else if(source.u_type == "Copier")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "MFD")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "Printer")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "Fax")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "UPS")
+		return "cmdb_ci_ups";
+	else if(source.u_type == "Hard Drive")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "Tape")
+		return "cmdb_ci_peripheral";
+	else if(source.u_type == "Laptop")
+		return "cmdb_ci_computer";
+	else if(source.u_type == "PC")
+		return "cmdb_ci_computer";
+	else if(source.u_type == "Server")
+		return "cmdb_ci_server";
+	else 
+		return "cmdb_ci_acc";
+
+})(source);]]></source_script>
+        <source_table>x_140262_veridy_veridy_expected_cmdb_ci</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>JLee</sys_created_by>
+        <sys_created_on>2018-07-12 13:19:22</sys_created_on>
+        <sys_id>3788a3344f1313009be84e318110c787</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>sys_transform_entry_3788a3344f1313009be84e318110c787</sys_update_name>
+        <sys_updated_by>JLee</sys_updated_by>
+        <sys_updated_on>2018-07-12 15:47:44</sys_updated_on>
+        <target_field>sys_class_name</target_field>
+        <target_table>cmdb_ci</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

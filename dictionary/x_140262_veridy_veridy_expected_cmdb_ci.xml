@@ -5,6 +5,7 @@
         <element attributes="import_attribute_name=CostCenter,edge_encryption_enabled=true" label="CostCenter" max_length="40" name="u_costcenter" type="string"/>
         <element attributes="import_attribute_name=DataCleanup,edge_encryption_enabled=true" label="DataCleanup" max_length="40" name="u_datacleanup" type="string"/>
         <element attributes="import_attribute_name=Description,edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="ï»¿ManifestID" max_length="40" name="u_ï__manifestid" type="string"/>
         <element attributes="import_attribute_name=LBS,edge_encryption_enabled=true" label="LBS" max_length="40" name="u_lbs" type="string"/>
         <element attributes="import_attribute_name=ManifestID,edge_encryption_enabled=true" label="ManifestID" max_length="40" name="u_manifestid" type="string"/>
         <element attributes="import_attribute_name=Manufacturer,edge_encryption_enabled=true" label="Manufacturer" max_length="40" name="u_manufacturer" type="string"/>
