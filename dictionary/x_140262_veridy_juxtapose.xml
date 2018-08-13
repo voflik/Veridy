@@ -8,7 +8,7 @@
         <element label="Actual Model" max_length="40" name="actual_model" type="string"/>
         <element label="Actual Serial" max_length="40" name="actual_serial" type="string"/>
         <element label="Actual Tag" max_length="40" name="actual_tag" type="string"/>
-        <element label="Calculated Confidence Level" max_length="10" name="calculated_confidence_level" read_only="true" type="integer"/>
+        <element default="0" label="Calculated Confidence Level" max_length="10" name="calculated_confidence_level" read_only="true" type="integer"/>
         <element label="Expected Class" max_length="40" name="expected_class" type="string"/>
         <element label="Expected Description" max_length="255" name="expected_description" type="string"/>
         <element label="Expected Manufacturer" max_length="40" name="expected_manufacturer" type="string"/>
@@ -41,10 +41,10 @@
         <element label="Match Tag Model" max_length="40" name="match_tag_model" type="string"/>
         <element choice="1" label="Match Type" max_length="40" name="match_type" type="choice">
             <choice>
-                <element label="Direct" value="DirectMatch"/>
-                <element label="Indirect" value="IndirectMatch"/>
-                <element label="Likely Type 1" value="LikelyType1"/>
-                <element label="Likely Type 2" value="LikelyType2"/>
+                <element label="Direct" value="Direct"/>
+                <element label="Indirect" value="Indirect"/>
+                <element label="Likely Type 1" value="Likely Type 1"/>
+                <element label="Likely Type 2" value="Likely Type 2"/>
                 <element label="Logical" value="Logical"/>
                 <element label="Mismatch Type 1" value="Mismatch Type 1"/>
                 <element label="Mismatch Type 2" value="Mismatch Type 2"/>
@@ -57,8 +57,8 @@
                 <element label="No Recorded Serial Number" value="No Recorded Serial Number"/>
                 <element label="Not Used Not Provided" value="Not Used Not Provided"/>
                 <element label="Perfect" value="Perfect"/>
-                <element label="Recorded No Match" value="Recorded No Match"/>
-                <element label="Unrecorded No Match" value="Unrecorded No Match"/>
+                <element label="Recorded No Match" value="Recorded Not Provided"/>
+                <element label="Unrecorded No Match" value="Unrecorded Not Provided"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>

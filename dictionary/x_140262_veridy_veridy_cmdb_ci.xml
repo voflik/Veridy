@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="master_juxtapose.csv (Uploaded)" max_length="40" name="x_140262_veridy_veridy_cmdb_ci" type="collection">
+        <element attributes="import_attribute_name=ClientTag,edge_encryption_enabled=true" label="ClientTag" max_length="40" name="u_clienttag" type="string"/>
+        <element attributes="import_attribute_name=CostCenter,edge_encryption_enabled=true" label="CostCenter" max_length="40" name="u_costcenter" type="string"/>
+        <element attributes="import_attribute_name=DataCleanup,edge_encryption_enabled=true" label="DataCleanup" max_length="40" name="u_datacleanup" type="string"/>
+        <element attributes="import_attribute_name=Description,edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="ï»¿ManifestID" max_length="40" name="u_ï__manifestid" type="string"/>
+        <element attributes="import_attribute_name=LBS,edge_encryption_enabled=true" label="LBS" max_length="40" name="u_lbs" type="string"/>
+        <element attributes="import_attribute_name=Manufacturer,edge_encryption_enabled=true" label="Manufacturer" max_length="40" name="u_manufacturer" type="string"/>
+        <element attributes="import_attribute_name=MediaStorage,edge_encryption_enabled=true" label="MediaStorage" max_length="40" name="u_mediastorage" type="string"/>
+        <element attributes="import_attribute_name=Method,edge_encryption_enabled=true" label="Method" max_length="40" name="u_method" type="string"/>
+        <element attributes="import_attribute_name=Model,edge_encryption_enabled=true" label="Model" max_length="40" name="u_model" type="string"/>
+        <element attributes="import_attribute_name=Notes,edge_encryption_enabled=true" label="Notes" max_length="41" name="u_notes" type="string"/>
+        <element attributes="import_attribute_name=Preparer,edge_encryption_enabled=true" label="Preparer" max_length="40" name="u_preparer" type="string"/>
+        <element attributes="import_attribute_name=Reason,edge_encryption_enabled=true" label="Reason" max_length="40" name="u_reason" type="string"/>
+        <element attributes="import_attribute_name=SerialNum,edge_encryption_enabled=true" label="SerialNum" max_length="40" name="u_serialnum" type="string"/>
+        <element attributes="import_attribute_name=Type,edge_encryption_enabled=true" label="Type" max_length="40" name="u_type" type="string"/>
+        <element attributes="import_attribute_name=UnitID,edge_encryption_enabled=true" label="UnitID" max_length="40" name="u_unitid" type="string"/>
+    </element>
+</database>

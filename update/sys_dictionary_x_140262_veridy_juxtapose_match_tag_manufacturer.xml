@@ -54,15 +54,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>DMann</sys_created_by>
         <sys_created_on>2018-06-15 15:57:25</sys_created_on>
-        <sys_id>e0a30e874f4f13009be84e318110c76b</sys_id>
+        <sys_id>252cc83edb5713004bf4eb41ca961981</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Match Tag Manufacturer</sys_name>
         <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
         <sys_policy/>
         <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
         <sys_update_name>sys_dictionary_x_140262_veridy_juxtapose_match_tag_manufacturer</sys_update_name>
-        <sys_updated_by>DMann</sys_updated_by>
-        <sys_updated_on>2018-07-06 18:51:23</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-07-18 01:45:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

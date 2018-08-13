@@ -15,10 +15,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>c89d61614f7213009be84e318110c7f1</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-19 15:16:03</sys_updated_on>
-            <value>DirectMatch</value>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 16:10:49</sys_updated_on>
+            <value>Direct</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -34,10 +34,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>ecad29214f7213009be84e318110c7ea</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-19 15:16:09</sys_updated_on>
-            <value>IndirectMatch</value>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 16:10:54</sys_updated_on>
+            <value>Indirect</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -53,10 +53,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>5490fd254f7213009be84e318110c7a5</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-19 15:20:52</sys_updated_on>
-            <value>LikelyType1</value>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 16:11:03</sys_updated_on>
+            <value>Likely Type 1</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -72,10 +72,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>06c079e14f7213009be84e318110c7bf</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>DMann</sys_updated_by>
-            <sys_updated_on>2018-06-19 15:21:44</sys_updated_on>
-            <value>LikelyType2</value>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 16:11:08</sys_updated_on>
+            <value>Likely Type 2</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -319,10 +319,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>f2fd29e14f7213009be84e318110c7e4</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>JLee</sys_updated_by>
-            <sys_updated_on>2018-07-05 19:15:54</sys_updated_on>
-            <value>Recorded No Match</value>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 16:12:51</sys_updated_on>
+            <value>Recorded Not Provided</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -338,10 +338,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>487e29e14f7213009be84e318110c7d6</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>JLee</sys_updated_by>
-            <sys_updated_on>2018-07-05 19:15:59</sys_updated_on>
-            <value>Unrecorded No Match</value>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 16:13:15</sys_updated_on>
+            <value>Unrecorded Not Provided</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>match_type</element>
@@ -349,7 +349,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>DMann</sys_created_by>
             <sys_created_on>2018-06-15 20:07:21</sys_created_on>
-            <sys_id>71e3c6c74f4f13009be84e318110c724</sys_id>
+            <sys_id>172c8c3edb5713004bf4eb41ca961954</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>match_type</sys_name>
             <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>

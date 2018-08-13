@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="System Diagnostics">eb3a2148db7313004bf4eb41ca9619e0</dashboard>
+        <home>false</home>
+        <homepage display_value="System Diagnostics">3e8f33360a6a803f001e6ab4bdfe584c</homepage>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-03 16:04:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e73a2148db7313004bf4eb41ca9619e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>eb3a2148db7313004bf4eb41ca9619e0</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_e73a2148db7313004bf4eb41ca9619e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-03 16:04:38</sys_updated_on>
+        <tab display_value="New Tab">e73a2148db7313004bf4eb41ca9619e4</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>

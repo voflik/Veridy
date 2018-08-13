@@ -12,16 +12,16 @@
         <sys_created_by>DMann</sys_created_by>
         <sys_created_on>2018-06-18 20:56:31</sys_created_on>
         <sys_id>7cd331114f3613009be84e318110c7a9</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>x_140262_veridy.ci_match.field_weight.manufacturer</sys_name>
         <sys_package display_value="Veridy" source="x_140262_veridy">b8bbf0d44f3213009be84e318110c774</sys_package>
         <sys_policy/>
         <sys_scope display_value="Veridy">b8bbf0d44f3213009be84e318110c774</sys_scope>
         <sys_update_name>sys_properties_7cd331114f3613009be84e318110c7a9</sys_update_name>
-        <sys_updated_by>AFurgiuele</sys_updated_by>
-        <sys_updated_on>2018-07-12 18:05:38</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-31 14:33:03</sys_updated_on>
         <type>integer</type>
-        <value>10</value>
+        <value>0</value>
         <write_roles>x_140262_veridy.admin</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=7cd331114f3613009be84e318110c7a9"/>

@@ -5,6 +5,16 @@
         <element attributes="import_attribute_name=CostCenter,edge_encryption_enabled=true" label="CostCenter" max_length="40" name="u_costcenter" type="string"/>
         <element attributes="import_attribute_name=DataCleanup,edge_encryption_enabled=true" label="DataCleanup" max_length="40" name="u_datacleanup" type="string"/>
         <element attributes="import_attribute_name=Description,edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Category" max_length="40" name="u_expected_category" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Client ID" max_length="40" name="u_expected_client_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Comments" max_length="40" name="u_expected_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Cost Center" max_length="40" name="u_expected_cost_center" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Data" max_length="40" name="u_expected_data" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Description" max_length="40" name="u_expected_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected LBS" max_length="40" name="u_expected_lbs" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Manufacturer" max_length="40" name="u_expected_manufacturer" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Model" max_length="40" name="u_expected_model" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Expected Serial" max_length="40" name="u_expected_serial" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="ï»¿ManifestID" max_length="40" name="u_ï__manifestid" type="string"/>
         <element attributes="import_attribute_name=LBS,edge_encryption_enabled=true" label="LBS" max_length="40" name="u_lbs" type="string"/>
         <element attributes="import_attribute_name=ManifestID,edge_encryption_enabled=true" label="ManifestID" max_length="40" name="u_manifestid" type="string"/>
@@ -13,6 +23,7 @@
         <element attributes="import_attribute_name=Method,edge_encryption_enabled=true" label="Method" max_length="40" name="u_method" type="string"/>
         <element attributes="import_attribute_name=Model,edge_encryption_enabled=true" label="Model" max_length="40" name="u_model" type="string"/>
         <element attributes="import_attribute_name=Notes,edge_encryption_enabled=true" label="Notes" max_length="40" name="u_notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="PK&#3;&#4;&#20;&#0;&#6;&#0;&#8;&#0;&#0;&#0;!&#0;A7‚Ïn&#1;&#0;&#0;&#4;&#5;&#0;&#0;&#19;&#0;&#8;&#2;[Content_Types].xml ¢&#4;&#2;( &#0;&#2;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;&#0;" max_length="40" name="u_pk___________ýhÿe___v____5_" type="string"/>
         <element attributes="import_attribute_name=Preparer,edge_encryption_enabled=true" label="Preparer" max_length="40" name="u_preparer" type="string"/>
         <element attributes="import_attribute_name=Reason,edge_encryption_enabled=true" label="Reason" max_length="40" name="u_reason" type="string"/>
         <element attributes="import_attribute_name=SerialNum,edge_encryption_enabled=true" label="SerialNum" max_length="40" name="u_serialnum" type="string"/>
